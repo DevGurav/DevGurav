@@ -88,6 +88,9 @@
       <a href="https://github.com/DevGurav/3d-book-reader">
         <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
       </a>
+      <a href="https://3d-book-reader.vercel.app">
+        <img src="https://img.shields.io/badge/Live%20Demo-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
+      </a>
     </td>
   </tr>
 </table>
