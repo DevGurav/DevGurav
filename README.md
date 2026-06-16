@@ -16,7 +16,7 @@
   <a href="https://leetcode.com/u/Devgurav1/" target="_blank">
     <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/>
   </a>
-  <a href="YOUR_PORTFOLIO_URL" target="_blank">
+  <a href="https://devendra-gurav.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white"/>
   </a>
 </p>
