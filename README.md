@@ -16,7 +16,7 @@
   <a href="https://leetcode.com/u/Devgurav1/" target="_blank">
     <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/>
   </a>
-  <a href="https://devendra-gurav.vercel.app/" target="_blank">
+  <a href="YOUR_PORTFOLIO_URL" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white"/>
   </a>
 </p>
@@ -88,9 +88,39 @@
       <a href="https://github.com/DevGurav/3d-book-reader">
         <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
       </a>
-      <a href="https://3d-book-reader.vercel.app">
-        <img src="https://img.shields.io/badge/Live%20Demo-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🗄️ Mnemo — Redis Built From Scratch</h3>
+      <p>A Redis-compatible in-memory data store written entirely in Java 21 — without using any built-in Java collections. Implements the real Redis wire protocol (RESP2), so <code>redis-cli</code>, Jedis, Lettuce, and <code>redis-benchmark</code> all connect to it with zero changes. Every internal piece is hand-built: a custom hash table with incremental rehashing, a span-augmented skip list for O(log N) rank queries, LRU/LFU eviction, TTL with lazy + active expiry, AOF crash recovery, and CRC-16 sharding across N lock-free executor threads via Netty.</p>
+      <p>
+        <strong>39 commands · 126 tests green · 14 Architecture Decision Records</strong>
+      </p>
+      <p>
+        <img alt="Java 21" src="https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>
+        <img alt="Netty" src="https://img.shields.io/badge/Netty-1F72AC?style=flat-square&logo=java&logoColor=white"/>
+        <img alt="RESP2" src="https://img.shields.io/badge/RESP2-DC382D?style=flat-square&logo=redis&logoColor=white"/>
+        <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+      </p>
+      <a href="https://github.com/DevGurav/mnemo-redis-compatible-server">
+        <img alt="View Repository" src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
       </a>
+    </td>
+    <td width="50%" valign="top">
+      <br/>
+      <blockquote>
+        <p><em>"Most developers learn to <strong>use</strong> Redis. I learned to <strong>build</strong> one."</em></p>
+        <p>Mnemo covers exactly what systems engineering interviews probe: custom data structures, concurrency without locks, memory management, and network protocol design. Every non-obvious design choice is backed by a written Architecture Decision Record.</p>
+      </blockquote>
+      <p><strong>Real-world use cases it can power:</strong></p>
+      <ul>
+        <li>Session & auth token cache (SET + TTL)</li>
+        <li>Live leaderboards (Sorted Sets)</li>
+        <li>Background task queues (Lists)</li>
+        <li>API rate limiting (INCR + EXPIRE)</li>
+        <li>User profile cache (Hashes)</li>
+      </ul>
     </td>
   </tr>
 </table>
