@@ -1,24 +1,14 @@
 <h1 align="center">Hi, I'm Devendra Gurav</h1>
 
 <p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=00C9FF&center=true&vCenter=true&width=600&lines=AI+%26+Data+Science+Engineer;Full-Stack+Developer;ML+%7C+FastAPI+%7C+React+%7C+Real-Time+Systems;Open+to+Internships+%26+Placements+2026" alt="Typing SVG" />
-  </a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=00C9FF&center=true&vCenter=true&width=600&lines=AI+%26+Data+Science+Engineer;Full-Stack+Developer;ML+%7C+FastAPI+%7C+React+%7C+Real-Time+Systems;Open+to+Internships+%26+Placements+2026" alt="Typing SVG" /></a>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/devendra-gurav-14a121381/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="mailto:dev.gurav011@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-  <a href="https://leetcode.com/u/Devgurav1/" target="_blank">
-    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/>
-  </a>
-  <a href="YOUR_PORTFOLIO_URL" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white"/>
-  </a>
+  <a href="https://www.linkedin.com/in/devendra-gurav-14a121381/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="mailto:dev.gurav011@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://leetcode.com/u/Devgurav1/" target="_blank"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a>
+  <a href="YOUR_PORTFOLIO_URL" target="_blank"><img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
 </p>
 
 ---
@@ -66,32 +56,56 @@
   <tr>
     <td width="50%" valign="top">
       <h3>🛡️ Fall Guardian — AI Fall Detection System</h3>
-      <p>End-to-end, event-driven fall detection platform with real-time caregiver alerts. FastAPI microservice backend with Redis Pub/Sub for live Server-Sent Events, PostgreSQL Row-Level Security, per-device JWT auth, and a ConvLSTM-Transformer ML pipeline trained on wearable sensor data.</p>
+      <p>Industry-grade, end-to-end wearable fall prediction pipeline. Predicts falls <strong>PRE-impact</strong> (~300 ms lead time). Architecture is split between an ultra-low-latency edge predictor and a heavy cloud validator, avoiding network roundtrips for raw sensor data.</p>
+      <p>
+        <strong>0.7% ADL False Positive Rate · 96.5% Recall · &lt;80ms Edge Latency</strong>
+      </p>
       <p>
         <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
-        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/>
         <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white"/>
-        <img src="https://img.shields.io/badge/ML-F7931E?style=flat-square&logo=scikit-learn&logoColor=white"/>
+        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
       </p>
-      <a href="https://github.com/DevGurav/fall-detect-system">
-        <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
-      </a>
+      <a href="https://github.com/DevGurav/fall-detect-system"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+      <br/><br/>
+      <blockquote>
+        <p><em>"Designed for the ~300ms window between fall initiation and ground impact."</em></p>
+      </blockquote>
+      <p><strong>Technical highlights:</strong></p>
+      <ul>
+        <li><strong>Edge ML:</strong> Quantized ConvLSTM-tiny (INT8, ~46 KB) via TFLite Micro for live 50Hz IMU inference.</li>
+        <li><strong>Cloud Validation:</strong> FastAPI + ONNX Transformer model with 5-fold cross-validation.</li>
+        <li><strong>Active Learning:</strong> Local ~10s grace period allows users to cancel false alarms, feeding labeled data directly into MLOps.</li>
+        <li><strong>Client App:</strong> Flutter caregiver app (Riverpod 3) with timeline, background FCM, and SOS.</li>
+      </ul>
     </td>
     <td width="50%" valign="top">
       <h3>📖 3D Book Reader</h3>
-      <p>Open-source 3D PDF e-reader built with React Three Fiber and Three.js. Features high-DPI vector canvas-to-mesh mapping, hardware-accelerated sharp-angle page rendering, and dynamic e-reader themes — all running in the browser with no native plugins.</p>
+      <p>Open-source 3D PDF e-reader built entirely in the browser with Next.js and React Three Fiber. It completely eliminates native plugins by relying on <code>pdf.js</code> for local parsing, and maps the high-DPI vector canvas onto interactive 3D meshes to simulate realistic book reading.</p>
       <p>
-        <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
-        <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white"/>
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+        <strong>100% Client-Side Privacy · WebGL Rendering · Accessibility First</strong>
       </p>
-      <a href="https://github.com/DevGurav/3d-book-reader">
-        <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
-      </a>
+      <p>
+        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
+        <img src="https://img.shields.io/badge/React_Three_Fiber-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
+        <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white"/>
+      </p>
+      <a href="https://github.com/DevGurav/3d-book-reader"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>&nbsp;<a href="https://3d-book-reader.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
+      <br/><br/>
+      <blockquote>
+        <p><em>"Merging immersive 3D graphics with rigorous web accessibility."</em></p>
+      </blockquote>
+      <p><strong>Core engineering features:</strong></p>
+      <ul>
+        <li><strong>Dynamic Resolution:</strong> Adaptive re-rendering of PDF vectors when the 3D camera zooms, maintaining crisp typography.</li>
+        <li><strong>Text-to-Speech Engine:</strong> Custom recursive paragraph-chunking bypassing browser memory limits, with auto-page flips.</li>
+        <li><strong>Dictionary Integration:</strong> Select any text to immediately trigger an API lookup with phonetics and encyclopedic data.</li>
+        <li><strong>Structural Reflow Mode:</strong> Mathematical re-typesetting of raw PDF layout data into a responsive, dyslexic-friendly view.</li>
+      </ul>
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
+    <td colspan="2" valign="top">
       <h3>🗄️ Mnemo — Redis Built From Scratch</h3>
       <p>A Redis-compatible in-memory data store written entirely in Java 21 — without using any built-in Java collections. Implements the real Redis wire protocol (RESP2), so <code>redis-cli</code>, Jedis, Lettuce, and <code>redis-benchmark</code> all connect to it with zero changes. Every internal piece is hand-built: a custom hash table with incremental rehashing, a span-augmented skip list for O(log N) rank queries, LRU/LFU eviction, TTL with lazy + active expiry, AOF crash recovery, and CRC-16 sharding across N lock-free executor threads via Netty.</p>
       <p>
@@ -103,11 +117,7 @@
         <img alt="RESP2" src="https://img.shields.io/badge/RESP2-DC382D?style=flat-square&logo=redis&logoColor=white"/>
         <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
       </p>
-      <a href="https://github.com/DevGurav/mnemo-redis-compatible-server">
-        <img alt="View Repository" src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
-      </a>
-    </td>
-    <td width="50%" valign="top">
+      <a href="https://github.com/DevGurav/mnemo-redis-compatible-server"><img alt="View Repository" src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
       <br/>
       <blockquote>
         <p><em>"Most developers learn to <strong>use</strong> Redis. I learned to <strong>build</strong> one."</em></p>
