@@ -15,7 +15,7 @@
 
 ## About Me
 
-- 🎓 3rd Year B.E. in **Artificial Intelligence & Data Science** — VCET, Mumbai University
+- 🎓 Final Year B.E. in **Artificial Intelligence & Data Science** — VCET, Mumbai University
 - 🤖 Building intelligent systems at the intersection of **ML, backend APIs, and real-time data pipelines**
 - 🛡️ Currently shipping **Fall Guardian v3** — an end-to-end wearable AI fall detection platform (ConvLSTM + FastAPI + Redis + PostgreSQL)
 - 🔍 Actively seeking **SDE / ML internship & placement opportunities for 2026**
