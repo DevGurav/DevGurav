@@ -17,7 +17,7 @@
 
 - 🎓 Final Year B.E. in **Artificial Intelligence & Data Science** — VCET, Mumbai University
 - 🤖 Building intelligent systems at the intersection of **ML, backend APIs, and real-time data pipelines**
-- 🛡️ Currently shipping **Fall Guardian v3** — an end-to-end wearable AI fall detection platform (ConvLSTM + FastAPI + Redis + PostgreSQL)
+- 🛡️ Shipped **Fall Guardian v3** (wearable AI fall detection) and **UrbanHeat AI** (Mumbai heat-island prediction) end-to-end — now building **Drishti**, an offline vision assistant for blind users
 - 🔍 Actively seeking **SDE / ML internship & placement opportunities for 2026**
 - 📫 Reach me at **dev.gurav011@gmail.com**
 
@@ -60,85 +60,128 @@
 
 ## Featured Projects
 
+<sub>✅ completed &nbsp;·&nbsp; 🚧 in progress — open <strong>Highlights</strong> on any card for the technical deep-dive</sub>
+
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>🛡️ Fall Guardian — AI Fall Detection System</h3>
-      <p>Industry-grade, end-to-end wearable fall prediction pipeline. Predicts falls <strong>PRE-impact</strong> (~300 ms lead time). Architecture is split between an ultra-low-latency edge predictor and a heavy cloud validator, avoiding network roundtrips for raw sensor data.</p>
-      <p>
-        <strong>0.7% ADL False Positive Rate · 96.5% Recall · &lt;80ms Edge Latency</strong>
-      </p>
+      <h3>🛡️ Fall Guardian v3 &nbsp;<img src="https://img.shields.io/badge/completed-2ea44f?style=flat-square"/></h3>
+      <p>Wrist-worn AI that predicts falls for elderly users <strong>before impact</strong> — an edge model fires in &lt;80ms, a cloud model confirms and grades severity, and the caregiver's phone gets a live alert.</p>
       <p>
         <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
-        <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/>
         <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"/>
         <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/>
       </p>
-      <a href="https://github.com/DevGurav/fall-detect-system"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-      <br/><br/>
-      <blockquote>
-        <p><em>"Designed for the ~300ms window between fall initiation and ground impact."</em></p>
-      </blockquote>
-      <p><strong>Technical highlights:</strong></p>
-      <ul>
-        <li><strong>Edge ML:</strong> Quantized ConvLSTM-tiny (INT8, ~46 KB) via TFLite Micro for live 50Hz IMU inference.</li>
-        <li><strong>Cloud Validation:</strong> FastAPI + ONNX Transformer model with 5-fold cross-validation.</li>
-        <li><strong>Active Learning:</strong> Local ~10s grace period allows users to cancel false alarms, feeding labeled data directly into MLOps.</li>
-        <li><strong>Client App:</strong> Flutter caregiver app (Riverpod 3) with timeline, background FCM, and SOS.</li>
-      </ul>
+      <p><a href="https://github.com/DevGurav/fall-detect-system"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a></p>
+      <details>
+        <summary><sub><strong>Highlights</strong></sub></summary>
+        <ul>
+          <li>96.5% recall · 0.7% false-positive rate on daily activity · ~300ms pre-impact lead time</li>
+          <li>Edge ConvLSTM-tiny (INT8, ~46 KB) + cloud Transformer (ONNX, 5-fold cross-validated)</li>
+          <li>Live SSE + FCM alerts, emergency SOS, per-user active learning from cancelled alarms</li>
+        </ul>
+      </details>
     </td>
     <td width="50%" valign="top">
-      <h3>📖 3D Book Reader</h3>
-      <p>Open-source 3D PDF e-reader built entirely in the browser with Next.js and React Three Fiber. It completely eliminates native plugins by relying on <code>pdf.js</code> for local parsing, and maps the high-DPI vector canvas onto interactive 3D meshes to simulate realistic book reading.</p>
+      <h3>🌆 UrbanHeat AI — Mumbai &nbsp;<img src="https://img.shields.io/badge/completed-2ea44f?style=flat-square"/></h3>
+      <p>Maps and explains Mumbai's urban heat islands from satellite data, ranks the worst-hit wards, simulates the cooling effect of interventions, and answers planner questions through an AI copilot.</p>
       <p>
-        <strong>100% Client-Side Privacy · WebGL Rendering · Accessibility First</strong>
+        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
+        <img src="https://img.shields.io/badge/XGBoost-4285F4?style=flat-square"/>
+        <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square"/>
+        <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
       </p>
-      <p>
-        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
-        <img src="https://img.shields.io/badge/React_Three_Fiber-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
-        <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white"/>
-      </p>
-      <a href="https://github.com/DevGurav/3d-book-reader"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>&nbsp;<a href="https://3d-book-reader.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
-      <br/><br/>
-      <blockquote>
-        <p><em>"Merging immersive 3D graphics with rigorous web accessibility."</em></p>
-      </blockquote>
-      <p><strong>Core engineering features:</strong></p>
-      <ul>
-        <li><strong>Dynamic Resolution:</strong> Adaptive re-rendering of PDF vectors when the 3D camera zooms, maintaining crisp typography.</li>
-        <li><strong>Text-to-Speech Engine:</strong> Custom recursive paragraph-chunking bypassing browser memory limits, with auto-page flips.</li>
-        <li><strong>Dictionary Integration:</strong> Select any text to immediately trigger an API lookup with phonetics and encyclopedic data.</li>
-        <li><strong>Structural Reflow Mode:</strong> Mathematical re-typesetting of raw PDF layout data into a responsive, dyslexic-friendly view.</li>
-      </ul>
+      <p><a href="https://github.com/DevGurav/urbanheat-mumbai"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>&nbsp;<a href="https://urbanheat-mumbai.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a></p>
+      <details>
+        <summary><sub><strong>Highlights</strong></sub></summary>
+        <ul>
+          <li>Land Surface Temperature from Landsat, SHAP-explained per-cell heat attribution</li>
+          <li>Digital-twin scenario simulator — re-predicts heat after a hypothetical intervention</li>
+          <li>4 LangGraph agents (planning, digital twin, monitoring, RAG copilot) deployed and live</li>
+        </ul>
+      </details>
     </td>
   </tr>
   <tr>
-    <td colspan="2" valign="top">
-      <h3>🗄️ Mnemo — Redis Built From Scratch</h3>
-      <p>A Redis-compatible in-memory data store written entirely in Java 21 — without using any built-in Java collections. Implements the real Redis wire protocol (RESP2), so <code>redis-cli</code>, Jedis, Lettuce, and <code>redis-benchmark</code> all connect to it with zero changes. Every internal piece is hand-built: a custom hash table with incremental rehashing, a span-augmented skip list for O(log N) rank queries, LRU/LFU eviction, TTL with lazy + active expiry, AOF crash recovery, and CRC-16 sharding across N lock-free executor threads via Netty.</p>
-      <p>
-        <strong>39 commands · 126 tests green · 14 Architecture Decision Records</strong>
-      </p>
+    <td width="50%" valign="top">
+      <h3>🗄️ Mnemo — Redis Built From Scratch &nbsp;<img src="https://img.shields.io/badge/completed-2ea44f?style=flat-square"/></h3>
+      <p>A Redis-compatible in-memory store hand-built in Java 21 — custom hash table, skip list, and LRU/LFU eviction under the real RESP2 protocol, so <code>redis-cli</code> connects with zero changes.</p>
       <p>
         <img alt="Java 21" src="https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>
         <img alt="Netty" src="https://img.shields.io/badge/Netty-1F72AC?style=flat-square&logo=java&logoColor=white"/>
         <img alt="RESP2" src="https://img.shields.io/badge/RESP2-DC382D?style=flat-square&logo=redis&logoColor=white"/>
         <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
       </p>
-      <a href="https://github.com/DevGurav/mnemo-redis-compatible-server"><img alt="View Repository" src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-      <br/>
-      <blockquote>
-        <p><em>"Most developers learn to <strong>use</strong> Redis. I learned to <strong>build</strong> one."</em></p>
-        <p>Mnemo covers exactly what systems engineering interviews probe: custom data structures, concurrency without locks, memory management, and network protocol design. Every non-obvious design choice is backed by a written Architecture Decision Record.</p>
-      </blockquote>
-      <p><strong>Real-world use cases it can power:</strong></p>
-      <ul>
-        <li>Session & auth token cache (SET + TTL)</li>
-        <li>Live leaderboards (Sorted Sets)</li>
-        <li>Background task queues (Lists)</li>
-        <li>API rate limiting (INCR + EXPIRE)</li>
-        <li>User profile cache (Hashes)</li>
-      </ul>
+      <p><a href="https://github.com/DevGurav/mnemo-redis-compatible-server"><img alt="View Repository" src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a></p>
+      <details>
+        <summary><sub><strong>Highlights</strong></sub></summary>
+        <ul>
+          <li>39 commands · 126 tests green · 14 Architecture Decision Records</li>
+          <li>Incremental rehashing, span-augmented skip list, AOF crash recovery</li>
+          <li>CRC-16 sharding across N lock-free executor threads via Netty</li>
+        </ul>
+      </details>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📖 3D Book Reader &nbsp;<img src="https://img.shields.io/badge/completed-2ea44f?style=flat-square"/></h3>
+      <p>Open any PDF and read it on a realistic 3D book in the browser — page-flip animation, a dyslexic-friendly reflow mode, text-to-speech, and instant dictionary lookup, 100% client-side.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
+        <img src="https://img.shields.io/badge/React_Three_Fiber-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
+        <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white"/>
+      </p>
+      <p><a href="https://github.com/DevGurav/3d-book-reader"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>&nbsp;<a href="https://3d-book-reader.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a></p>
+      <details>
+        <summary><sub><strong>Highlights</strong></sub></summary>
+        <ul>
+          <li>100% client-side — PDFs are parsed and rendered locally with <code>pdf.js</code>, nothing uploaded</li>
+          <li>Reflow mode mathematically re-typesets raw PDF text into a dyslexic-friendly layout</li>
+          <li>Custom text-to-speech engine with recursive paragraph-chunking and auto page-flips</li>
+        </ul>
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><sub><strong>🚧 Currently building</strong></sub></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>👁️ Drishti &nbsp;<img src="https://img.shields.io/badge/in--progress-dbab09?style=flat-square"/></h3>
+      <p>A fully offline assistant for blind users that reads medicine strips, identifies currency, and describes surroundings aloud in Marathi, Hindi, and English — no internet, no cloud upload.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
+      </p>
+      <p><a href="https://github.com/DevGurav/Drishti"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a></p>
+      <details>
+        <summary><sub><strong>Highlights</strong></sub></summary>
+        <ul>
+          <li>OCR-based read &amp; medicine modes working end-to-end, with a drug-database safety guardrail</li>
+          <li>Scene/currency modes and Marathi/Hindi speech output wired, pending fine-tuning</li>
+          <li>Building toward: on-device fine-tuned VLM and an Android port</li>
+        </ul>
+      </details>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🔐 ZK-PoC &nbsp;<img src="https://img.shields.io/badge/in--progress-dbab09?style=flat-square"/></h3>
+      <p>Researches whether consented, cryptographically-verified spare browser compute can fund the web as an alternative to ads — and reuses the same engine to replace wasteful anti-bot CPU puzzles.</p>
+      <p>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+        <img src="https://img.shields.io/badge/WebGPU-005A9C?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Solidity-363636?style=flat-square&logo=solidity&logoColor=white"/>
+      </p>
+      <p><a href="https://github.com/DevGurav/zkpoc"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>&nbsp;<a href="https://devgurav.github.io/zkpoc/demo/"><img src="https://img.shields.io/badge/Live%20Demo-222222?style=for-the-badge&logo=githubpages&logoColor=white"/></a></p>
+      <details>
+        <summary><sub><strong>Highlights</strong></sub></summary>
+        <ul>
+          <li>3 npm packages published; live WebGPU demo measuring real device throughput</li>
+          <li>In-browser Groth16 zero-knowledge proofs over a quantized compute circuit</li>
+          <li>Every economic and security claim is measured and reported, including unfavourable ones</li>
+        </ul>
+      </details>
     </td>
   </tr>
 </table>
@@ -147,14 +190,21 @@
 
 ## GitHub Stats
 
-<!-- <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=DevGurav&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DevGurav&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" width="40%" />
-</p> -->
+Contribution history, self-rendered daily by GitHub Actions and served straight from this repo —
+no third-party rendering service in the critical path, so it doesn't break when one has an outage.
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=DevGurav&theme=tokyonight&hide_border=true" width="55%" />
+  <img src="https://raw.githubusercontent.com/DevGurav/DevGurav/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only" width="100%" alt="GitHub contribution snake (dark)" />
+  <img src="https://raw.githubusercontent.com/DevGurav/DevGurav/output/github-contribution-grid-snake.svg#gh-light-mode-only" width="100%" alt="GitHub contribution snake (light)" />
 </p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=DevGurav&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=86400" width="48%" alt="DevGurav's GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DevGurav&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&cache_seconds=86400" width="40%" alt="DevGurav's most used languages" />
+</p>
+
+<sub>These two cards are rendered live by a shared third-party service and can occasionally fail to
+load — if a card looks broken, refresh the page; it does not affect the snake graph above.</sub>
 
 ---
 
