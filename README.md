@@ -190,8 +190,9 @@
 
 ## GitHub Stats
 
-Contribution history, self-rendered daily by GitHub Actions and served straight from this repo —
-no third-party rendering service in the critical path, so it doesn't break when one has an outage.
+Every graphic below is rendered daily by GitHub Actions and committed to this repo, so the page
+loads only files GitHub itself serves — there is no third-party service that can rate-limit,
+pause, or go down and leave a broken image here.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/DevGurav/DevGurav/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only" width="100%" alt="GitHub contribution snake (dark)" />
@@ -199,12 +200,10 @@ no third-party rendering service in the critical path, so it doesn't break when 
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=DevGurav&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=86400" width="48%" alt="DevGurav's GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DevGurav&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&cache_seconds=86400" width="40%" alt="DevGurav's most used languages" />
+  <img src="https://raw.githubusercontent.com/DevGurav/DevGurav/output/github-stats.svg" width="45%" alt="DevGurav's GitHub stats" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/DevGurav/DevGurav/output/top-languages.svg" width="45%" alt="DevGurav's most used languages" />
 </p>
-
-<sub>These two cards are rendered live by a shared third-party service and can occasionally fail to
-load — if a card looks broken, refresh the page; it does not affect the snake graph above.</sub>
 
 ---
 
