@@ -2,7 +2,10 @@ name: Build profile graphics
 
 on:
   schedule:
-    - cron: "0 0 * * *" # once a day
+    # Every 6 hours. The cards only move slowly, but Actions minutes are free on public repos
+    # and a shorter cycle means a bad run is corrected by the next one rather than sitting
+    # on the profile for a full day.
+    - cron: "0 */6 * * *"
   workflow_dispatch: {}
   push:
     branches:
