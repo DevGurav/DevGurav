@@ -17,7 +17,8 @@
 
 - 🎓 Final Year B.E. in **Artificial Intelligence & Data Science** — VCET, Mumbai University
 - 🤖 Building intelligent systems at the intersection of **ML, backend APIs, and real-time data pipelines**
-- 🛡️ Shipped **Fall Guardian v3** (wearable AI fall detection) and **UrbanHeat AI** (Mumbai heat-island prediction) end-to-end — now building **Drishti**, an offline vision assistant for blind users
+- 🛡️ Shipped **Fall Guardian v3** (wearable AI fall prediction), **UrbanHeat AI** (Mumbai heat-island digital twin) and **ZK-PoC** (verifiable browser compute — 3 npm packages, live demo) end-to-end
+- 👁️ Now building **Drishti**, a fully offline vision assistant for blind users in Marathi, Hindi and English
 - 🔍 Actively seeking **SDE / ML internship & placement opportunities for 2026**
 - 📫 Reach me at **dev.gurav011@gmail.com**
 
@@ -31,8 +32,10 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
 
 **Frameworks & Libraries**
 
@@ -43,6 +46,8 @@
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-4285F4?style=for-the-badge)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge)
 ![ONNX](https://img.shields.io/badge/ONNX-005CED?style=for-the-badge&logo=onnx&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
@@ -52,7 +57,9 @@
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
@@ -85,6 +92,48 @@
       </details>
     </td>
     <td width="50%" valign="top">
+      <h3>👁️ Drishti &nbsp;<img src="https://img.shields.io/badge/in--progress-dbab09?style=flat-square"/></h3>
+      <p>A fully offline assistant for blind users that reads medicine strips, identifies rupee notes, reads Devanagari text, and describes surroundings aloud in Marathi, Hindi, and English — no internet, no cloud upload.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
+        <img src="https://img.shields.io/badge/PaddleOCR-0A9EDC?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
+      </p>
+      <p><a href="https://github.com/DevGurav/Drishti"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a></p>
+      <details>
+        <summary><sub><strong>Highlights</strong></sub></summary>
+        <ul>
+          <li>All five modes run end-to-end on real models — read, medicine, currency, scene and visual Q&amp;A</li>
+          <li>Currency classifier at 98.27% over 7 note classes, from a 6.2 MB checkpoint</li>
+          <li>Medicine mode is guardrailed against India's NLEM 2022 list — the VLM never guesses a drug name</li>
+          <li>175 tests run with no GPU and no model weights; LoRA fine-tune in progress</li>
+        </ul>
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🔐 ZK-PoC &nbsp;<img src="https://img.shields.io/badge/completed-2ea44f?style=flat-square"/></h3>
+      <p>Asks whether consented, cryptographically-verified spare browser compute could fund the web instead of ads — and <strong>measures</strong> the answer instead of asserting it. Three npm packages, a live WebGPU demo, and a correction to a published IEEE paper.</p>
+      <p>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+        <img src="https://img.shields.io/badge/WebGPU-005A9C?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Circom%20%2F%20Groth16-8B5CF6?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Solidity-363636?style=flat-square&logo=solidity&logoColor=white"/>
+      </p>
+      <p><a href="https://github.com/DevGurav/zkpoc"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>&nbsp;<a href="https://devgurav.github.io/zkpoc/demo/"><img src="https://img.shields.io/badge/Live%20Demo-222222?style=for-the-badge&logo=githubpages&logoColor=white"/></a></p>
+      <details>
+        <summary><sub><strong>Highlights</strong></sub></summary>
+        <ul>
+          <li>Found the canonical IEEE TDSC 2024 economic baseline overstated by ~87× — every other figure in the paper reproduces exactly, so the correction <em>strengthens</em> their conclusion</li>
+          <li>Derived the never-published break-even resource share: σ* = 6.7% against a 5% design ceiling — off by 1.3×, not an order of magnitude</li>
+          <li>3 npm packages published; in-browser Groth16 proofs over a quantized compute circuit</li>
+          <li>Every economic and security claim is measured and reported, including unfavourable ones</li>
+        </ul>
+      </details>
+    </td>
+    <td width="50%" valign="top">
       <h3>🌆 UrbanHeat AI — Mumbai &nbsp;<img src="https://img.shields.io/badge/completed-2ea44f?style=flat-square"/></h3>
       <p>Maps and explains Mumbai's urban heat islands from satellite data, ranks the worst-hit wards, simulates the cooling effect of interventions, and answers planner questions through an AI copilot.</p>
       <p>
@@ -97,9 +146,10 @@
       <details>
         <summary><sub><strong>Highlights</strong></sub></summary>
         <ul>
-          <li>Land Surface Temperature from Landsat, SHAP-explained per-cell heat attribution</li>
-          <li>Digital-twin scenario simulator — re-predicts heat after a hypothetical intervention</li>
+          <li>Predicts an <em>unseen ward's</em> surface temperature to 1.10 °C (spatial R² 0.893) from Landsat LST, SHAP-explained per cell</li>
+          <li>Digital twin: greening cools 7,410 cells by −0.65 °C on average — and the 482 cells it warms are reported, not hidden</li>
           <li>4 LangGraph agents (planning, digital twin, monitoring, RAG copilot) deployed and live</li>
+          <li>Built end-to-end on free tiers and open data — no paid services anywhere</li>
         </ul>
       </details>
     </td>
@@ -139,47 +189,6 @@
           <li>100% client-side — PDFs are parsed and rendered locally with <code>pdf.js</code>, nothing uploaded</li>
           <li>Reflow mode mathematically re-typesets raw PDF text into a dyslexic-friendly layout</li>
           <li>Custom text-to-speech engine with recursive paragraph-chunking and auto page-flips</li>
-        </ul>
-      </details>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><sub><strong>🚧 Currently building</strong></sub></td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>👁️ Drishti &nbsp;<img src="https://img.shields.io/badge/in--progress-dbab09?style=flat-square"/></h3>
-      <p>A fully offline assistant for blind users that reads medicine strips, identifies currency, and describes surroundings aloud in Marathi, Hindi, and English — no internet, no cloud upload.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
-        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
-        <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
-      </p>
-      <p><a href="https://github.com/DevGurav/Drishti"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a></p>
-      <details>
-        <summary><sub><strong>Highlights</strong></sub></summary>
-        <ul>
-          <li>OCR-based read &amp; medicine modes working end-to-end, with a drug-database safety guardrail</li>
-          <li>Scene/currency modes and Marathi/Hindi speech output wired, pending fine-tuning</li>
-          <li>Building toward: on-device fine-tuned VLM and an Android port</li>
-        </ul>
-      </details>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🔐 ZK-PoC &nbsp;<img src="https://img.shields.io/badge/in--progress-dbab09?style=flat-square"/></h3>
-      <p>Researches whether consented, cryptographically-verified spare browser compute can fund the web as an alternative to ads — and reuses the same engine to replace wasteful anti-bot CPU puzzles.</p>
-      <p>
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-        <img src="https://img.shields.io/badge/WebGPU-005A9C?style=flat-square"/>
-        <img src="https://img.shields.io/badge/Solidity-363636?style=flat-square&logo=solidity&logoColor=white"/>
-      </p>
-      <p><a href="https://github.com/DevGurav/zkpoc"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>&nbsp;<a href="https://devgurav.github.io/zkpoc/demo/"><img src="https://img.shields.io/badge/Live%20Demo-222222?style=for-the-badge&logo=githubpages&logoColor=white"/></a></p>
-      <details>
-        <summary><sub><strong>Highlights</strong></sub></summary>
-        <ul>
-          <li>3 npm packages published; live WebGPU demo measuring real device throughput</li>
-          <li>In-browser Groth16 zero-knowledge proofs over a quantized compute circuit</li>
-          <li>Every economic and security claim is measured and reported, including unfavourable ones</li>
         </ul>
       </details>
     </td>
