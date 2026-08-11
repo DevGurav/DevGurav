@@ -107,7 +107,7 @@
           <li>All five modes run end-to-end on real models — read, medicine, currency, scene and visual Q&amp;A</li>
           <li>Currency classifier at 98.27% over 7 note classes, from a 6.2 MB checkpoint</li>
           <li>Medicine mode is guardrailed against India's NLEM 2022 list — the VLM never guesses a drug name</li>
-          <li>175 tests run with no GPU and no model weights; LoRA fine-tune in progress</li>
+          <li>179 tests run with no GPU and no model weights; LoRA fine-tune in progress</li>
         </ul>
       </details>
     </td>
