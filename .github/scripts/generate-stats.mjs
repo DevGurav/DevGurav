@@ -14,13 +14,26 @@ const USER = process.argv[2] || "DevGurav";
 const OUT_DIR = process.argv[3] || "dist";
 const TOKEN = process.env.GITHUB_TOKEN;
 
-// tokyonight, to match the theme the README already used.
-const THEME = {
-  bg: "#1a1b27",
-  title: "#70a5fd",
-  icon: "#bf91f3",
-  text: "#38bdae",
-};
+// Two surfaces render these cards and they do not share a palette, so each run writes both.
+// The README pair is tokyonight, matching the theme that page already used. The portfolio
+// pair uses its own accent colours and leaves the card background transparent, because there
+// the card sits inside a glass panel and a second opaque rectangle inside it looks pasted on.
+const THEMES = [
+  {
+    suffix: "",
+    bg: "#1a1b27",
+    title: "#70a5fd",
+    icon: "#bf91f3",
+    text: "#38bdae",
+  },
+  {
+    suffix: "-portfolio",
+    bg: "none",
+    title: "#22d3ee",
+    icon: "#8b5cf6",
+    text: "#9fb0c7",
+  },
+];
 
 const FONT = "'Segoe UI', Ubuntu, Sans-Serif";
 
@@ -143,18 +156,18 @@ const esc = (s) =>
 
 const fmt = (n) => (n === null ? "—" : n.toLocaleString("en-US"));
 
-function statRow(icon, label, value, y) {
+function statRow(icon, label, value, y, theme) {
   return `
     <g transform="translate(0, ${y})">
-      <svg x="0" y="0" viewBox="0 0 16 16" width="16" height="16" fill="${THEME.icon}">
+      <svg x="0" y="0" viewBox="0 0 16 16" width="16" height="16" fill="${theme.icon}">
         <path d="${ICONS[icon]}"/>
       </svg>
-      <text x="27" y="12.5" fill="${THEME.text}" font-family="${FONT}" font-size="14">${esc(label)}:</text>
-      <text x="220" y="12.5" fill="${THEME.text}" font-family="${FONT}" font-size="14" font-weight="700" text-anchor="end">${esc(value)}</text>
+      <text x="27" y="12.5" fill="${theme.text}" font-family="${FONT}" font-size="14">${esc(label)}:</text>
+      <text x="220" y="12.5" fill="${theme.text}" font-family="${FONT}" font-size="14" font-weight="700" text-anchor="end">${esc(value)}</text>
     </g>`;
 }
 
-function statsCard(stats) {
+function statsCard(stats, theme) {
   // A row reading "Total PRs: 0" is noise that makes the profile look emptier than the work
   // behind it. Zero/unavailable rows drop out and reappear on their own once they count.
   const optional = (icon, label, value) =>
@@ -170,19 +183,19 @@ function statsCard(stats) {
     ["people", "Followers", fmt(stats.followers)],
   ];
   const height = 60 + rows.length * 25 + 15;
-  const body = rows.map(([i, l, v], idx) => statRow(i, l, v, idx * 25)).join("");
+  const body = rows.map(([i, l, v], idx) => statRow(i, l, v, idx * 25, theme)).join("");
 
   return `<svg width="450" height="${height}" viewBox="0 0 450 ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(USER)}'s GitHub statistics">
   <title>${esc(USER)}'s GitHub statistics</title>
-  <rect x="0" y="0" width="450" height="${height}" rx="6" fill="${THEME.bg}"/>
-  <text x="25" y="35" fill="${THEME.title}" font-family="${FONT}" font-size="18" font-weight="600">${esc(USER)}'s GitHub Stats</text>
+  <rect x="0" y="0" width="450" height="${height}" rx="6" fill="${theme.bg}"/>
+  <text x="25" y="35" fill="${theme.title}" font-family="${FONT}" font-size="18" font-weight="600">${esc(USER)}'s GitHub Stats</text>
   <g transform="translate(25, 55)">${body}
   </g>
 </svg>
 `;
 }
 
-function languageCard(langs) {
+function languageCard(langs, theme) {
   const total = langs.reduce((sum, l) => sum + l.bytes, 0) || 1;
   const withPct = langs.map((l) => ({ ...l, pct: (l.bytes / total) * 100 }));
 
@@ -208,8 +221,8 @@ function languageCard(langs) {
       return `
       <g transform="translate(${x}, ${y})">
         <circle cx="5" cy="6" r="5" fill="${colorFor(l.name)}"/>
-        <text x="18" y="11" fill="${THEME.text}" font-family="${FONT}" font-size="13">${esc(l.name)}</text>
-        <text x="185" y="11" fill="${THEME.text}" font-family="${FONT}" font-size="13" text-anchor="end">${l.pct.toFixed(1)}%</text>
+        <text x="18" y="11" fill="${theme.text}" font-family="${FONT}" font-size="13">${esc(l.name)}</text>
+        <text x="185" y="11" fill="${theme.text}" font-family="${FONT}" font-size="13" text-anchor="end">${l.pct.toFixed(1)}%</text>
       </g>`;
     })
     .join("");
@@ -218,8 +231,8 @@ function languageCard(langs) {
 
   return `<svg width="450" height="${height}" viewBox="0 0 450 ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(USER)}'s most used languages">
   <title>${esc(USER)}'s most used languages</title>
-  <rect x="0" y="0" width="450" height="${height}" rx="6" fill="${THEME.bg}"/>
-  <text x="25" y="35" fill="${THEME.title}" font-family="${FONT}" font-size="18" font-weight="600">Most Used Languages</text>
+  <rect x="0" y="0" width="450" height="${height}" rx="6" fill="${theme.bg}"/>
+  <text x="25" y="35" fill="${theme.title}" font-family="${FONT}" font-size="18" font-weight="600">Most Used Languages</text>
   <g transform="translate(25, 52)">
     <mask id="bar-round"><rect x="0" y="0" width="${barWidth}" height="8" rx="4" fill="#fff"/></mask>
     <g mask="url(#bar-round)">${segments}</g>
@@ -286,9 +299,14 @@ async function main() {
   console.log("  stats:", stats);
 
   await mkdir(OUT_DIR, { recursive: true });
-  await writeFile(join(OUT_DIR, "github-stats.svg"), statsCard(stats), "utf8");
-  await writeFile(join(OUT_DIR, "top-languages.svg"), languageCard(top), "utf8");
-  console.log(`Wrote github-stats.svg and top-languages.svg to ${OUT_DIR}/`);
+  for (const theme of THEMES) {
+    const statsName = `github-stats${theme.suffix}.svg`;
+    const langName = `top-languages${theme.suffix}.svg`;
+    await writeFile(join(OUT_DIR, statsName), statsCard(stats, theme), "utf8");
+    await writeFile(join(OUT_DIR, langName), languageCard(top, theme), "utf8");
+    console.log(`  wrote ${statsName} and ${langName}`);
+  }
+  console.log(`Wrote ${THEMES.length * 2} cards to ${OUT_DIR}/`);
 }
 
 main().catch((err) => {
