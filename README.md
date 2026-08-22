@@ -17,7 +17,7 @@
 
 - 🎓 Final Year B.E. in **Artificial Intelligence & Data Science** — VCET, Mumbai University
 - 🤖 Building intelligent systems at the intersection of **ML, backend APIs, and real-time data pipelines**
-- 🛡️ Shipped **Fall Guardian v3** (wearable AI fall prediction), **UrbanHeat AI** (Mumbai heat-island digital twin) and **ZK-PoC** (verifiable browser compute — 3 npm packages, live demo) end-to-end
+- 🛡️ Shipped **Fall Guardian v3** (wearable AI fall prediction), **hark** (deterministic record & replay for AI agents, in Go), **UrbanHeat AI** (Mumbai heat-island digital twin) and **ZK-PoC** (verifiable browser compute — 3 npm packages, live demo) end-to-end
 - 👁️ Now building **Drishti**, a fully offline vision assistant for blind users in Marathi, Hindi and English
 - 🔍 Actively seeking **SDE / ML internship & placement opportunities for 2026**
 - 📫 Reach me at **dev.gurav011@gmail.com**
@@ -30,6 +30,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
