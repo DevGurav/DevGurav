@@ -34,6 +34,13 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      # Platane/snk is a Docker action, so it runs as root and leaves dist/ owned by
+      # root:root. Every step after it runs as the unprivileged runner user, which is
+      # how the stat cards step came to fail with EACCES on every run for two weeks
+      # while the snake step above it stayed green. Hand the directory back.
+      - name: Take ownership of the output directory
+        run: sudo chown -R "$(id -u):$(id -g)" dist
+
       - name: Generate stat cards
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
