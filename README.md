@@ -92,22 +92,23 @@
       </details>
     </td>
     <td width="50%" valign="top">
-      <h3>👁️ Drishti &nbsp;<img src="https://img.shields.io/badge/in--progress-dbab09?style=flat-square"/></h3>
-      <p>A fully offline assistant for blind users that reads medicine strips, identifies rupee notes, reads Devanagari text, and describes surroundings aloud in Marathi, Hindi, and English — no internet, no cloud upload.</p>
+      <h3>📼 hark &nbsp;<img src="https://img.shields.io/badge/completed-2ea44f?style=flat-square"/></h3>
+      <p>An agent runtime that records an AI agent at a boundary it cannot bypass, <strong>replays the run deterministically</strong>, and proves the replay is real — kernel-enforced containment and a transparency-log anchor in one artifact.</p>
       <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
-        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
-        <img src="https://img.shields.io/badge/PaddleOCR-0A9EDC?style=flat-square"/>
-        <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black"/>
+        <img src="https://img.shields.io/badge/Landlock%20%2F%20seccomp-EE0000?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Sigstore-2F2E7B?style=flat-square"/>
+        <img src="https://img.shields.io/badge/BLAKE3%20%2F%20Ed25519-8B5CF6?style=flat-square"/>
       </p>
-      <p><a href="https://github.com/DevGurav/Drishti"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a></p>
+      <p><a href="https://github.com/DevGurav/hark"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a></p>
       <details>
         <summary><sub><strong>Highlights</strong></sub></summary>
         <ul>
-          <li>All five modes run end-to-end on real models — read, medicine, currency, scene and visual Q&amp;A</li>
-          <li>Currency classifier at 98.27% over 7 note classes, from a 6.2 MB checkpoint</li>
-          <li>Medicine mode is guardrailed against India's NLEM 2022 list — the VLM never guesses a drug name</li>
-          <li>179 tests run with no GPU and no model weights; LoRA fine-tune in progress</li>
+          <li>25/25 runs replay-equal across 5 agent shapes — streaming, retry-after-503, repeats and MCP included</li>
+          <li>A Merkle Mountain Range proves one event happened in 448 bytes, without disclosing the rest of the run</li>
+          <li>Mediation costs +0.18 ms at p50; a replay that skips a 0.9 s model call finishes in 145 ms</li>
+          <li>A prompt-injected agent's exfiltration is denied by the kernel — and the key it leaked was a placeholder</li>
         </ul>
       </details>
     </td>
@@ -175,25 +176,29 @@
       </details>
     </td>
     <td width="50%" valign="top">
-      <h3>📖 3D Book Reader &nbsp;<img src="https://img.shields.io/badge/completed-2ea44f?style=flat-square"/></h3>
-      <p>Open any PDF and read it on a realistic 3D book in the browser — page-flip animation, a dyslexic-friendly reflow mode, text-to-speech, and instant dictionary lookup, 100% client-side.</p>
+      <h3>👁️ Drishti &nbsp;<img src="https://img.shields.io/badge/in--progress-dbab09?style=flat-square"/></h3>
+      <p>A fully offline assistant for blind users that reads medicine strips, identifies rupee notes, reads Devanagari text, and describes surroundings aloud in Marathi, Hindi, and English — no internet, no cloud upload.</p>
       <p>
-        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
-        <img src="https://img.shields.io/badge/React_Three_Fiber-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
-        <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
+        <img src="https://img.shields.io/badge/PaddleOCR-0A9EDC?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
       </p>
-      <p><a href="https://github.com/DevGurav/3d-book-reader"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>&nbsp;<a href="https://3d-book-reader.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a></p>
+      <p><a href="https://github.com/DevGurav/Drishti"><img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a></p>
       <details>
         <summary><sub><strong>Highlights</strong></sub></summary>
         <ul>
-          <li>100% client-side — PDFs are parsed and rendered locally with <code>pdf.js</code>, nothing uploaded</li>
-          <li>Reflow mode mathematically re-typesets raw PDF text into a dyslexic-friendly layout</li>
-          <li>Custom text-to-speech engine with recursive paragraph-chunking and auto page-flips</li>
+          <li>All five modes run end-to-end on real models — read, medicine, currency, scene and visual Q&amp;A</li>
+          <li>Currency classifier at 98.27% over 7 note classes, from a 6.2 MB checkpoint</li>
+          <li>Medicine mode is guardrailed against India's NLEM 2022 list — the VLM never guesses a drug name</li>
+          <li>179 tests run with no GPU and no model weights; LoRA fine-tune in progress</li>
         </ul>
       </details>
     </td>
   </tr>
 </table>
+
+<sub><strong>Also:</strong> <a href="https://github.com/DevGurav/3d-book-reader">3D Book Reader</a> — open any PDF and read it on a realistic 3D book in the browser, with a dyslexic-friendly reflow mode and text-to-speech, 100% client-side (<a href="https://3d-book-reader.vercel.app/">live demo</a>)</sub>
 
 ---
 
