@@ -17,7 +17,7 @@
 
 - 🎓 Final Year B.E. in **Artificial Intelligence & Data Science** — VCET, Mumbai University
 - 🤖 Building intelligent systems at the intersection of **ML, backend APIs, and real-time data pipelines**
-- 🛡️ Shipped **Fall Guardian v3** (wearable AI fall prediction), **hark** (deterministic record & replay for AI agents, in Go), **UrbanHeat AI** (Mumbai heat-island digital twin) and **ZK-PoC** (verifiable browser compute — 3 npm packages, live demo) end-to-end
+- 🛡️ Shipped **Fall Guardian v3** (wearable AI fall prediction), **hark** (deterministic record & replay for AI agents, in Go), **UrbanHeat AI** (Mumbai heat-island digital twin) **ZK-PoC** (verifiable browser compute — 3 npm packages, live demo) and **unsaid** (a checker for characters TTS models silently refuse to say) end-to-end
 - 👁️ Now building **Drishti**, a fully offline vision assistant for blind users in Marathi, Hindi and English
 - 🔍 Actively seeking **SDE / ML internship & placement opportunities for 2026**
 - 📫 Reach me at **dev.gurav011@gmail.com**
@@ -193,6 +193,30 @@
           <li>Currency classifier at 98.27% over 7 note classes, from a 6.2 MB checkpoint</li>
           <li>Medicine mode is guardrailed against India's NLEM 2022 list — the VLM never guesses a drug name</li>
           <li>179 tests run with no GPU and no model weights; LoRA fine-tune in progress</li>
+        </ul>
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
+      <h3>🔢 unsaid &nbsp;<img src="https://img.shields.io/badge/completed-2ea44f?style=flat-square"/></h3>
+      <p>Text-to-speech models silently drop characters they cannot encode — no error, no warning, nothing in the logs, so the text you logged is correct and the audio your user heard is not. <code>unsaid</code> catches those characters in your test suite. The measurement behind it says the problem is <strong>the norm, not one model's quirk</strong>.</p>
+      <p>
+        <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+        <img alt="Transformers" src="https://img.shields.io/badge/Transformers-FFD21E?style=flat-square&logo=huggingface&logoColor=black"/>
+        <img alt="SentencePiece" src="https://img.shields.io/badge/SentencePiece-4B8BBE?style=flat-square"/>
+        <img alt="pytest" src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white"/>
+        <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"/>
+      </p>
+      <p><a href="https://github.com/DevGurav/unsaid"><img alt="View Repository" src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white"/></a>&nbsp;<a href="https://devgurav.github.io/unsaid/"><img alt="Coverage Table" src="https://img.shields.io/badge/Coverage%20Table-222222?style=for-the-badge&logo=githubpages&logoColor=white"/></a></p>
+      <details>
+        <summary><sub><strong>Highlights</strong></sub></summary>
+        <ul>
+          <li>Measured 30 TTS front-ends: <strong>only 4 of the 28 analysable ones can say all ten digits</strong>. 18 support some digits and not others — the dangerous shape, because numbers come out wrong rather than empty</li>
+          <li>The English model <code>mms-tts-eng</code> cannot say 7, 8 or 9; <code>mms-tts-deu</code> is missing only 9, so nine numbers in ten are perfect and nobody investigates the tenth</li>
+          <li>Came from a real incident: a Marathi voice has no 3, 5 or 8, so a Rs 500 note was announced as "00 rupees" for twelve days, past a 237-test suite that only ever asserted on the text</li>
+          <li>Each backend mirrors its front-end's normalisation from upstream source, then contradicts itself against upstream's own output — a disagreement is raised as a bug in the tool, never as a finding about your text</li>
+          <li>Refuses to guess: a model that romanises or phonemises before the vocabulary is consulted is reported as <em>not analysable</em> rather than given a confident, meaningless answer</li>
         </ul>
       </details>
     </td>
