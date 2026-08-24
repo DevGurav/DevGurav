@@ -18,7 +18,7 @@
 - 🎓 Final Year B.E. in **Artificial Intelligence & Data Science** — VCET, Mumbai University
 - 🤖 Building intelligent systems at the intersection of **ML, backend APIs, and real-time data pipelines**
 - 🛡️ Shipped **Fall Guardian v3** (wearable AI fall prediction), **hark** (deterministic record & replay for AI agents, in Go), **UrbanHeat AI** (Mumbai heat-island digital twin) **ZK-PoC** (verifiable browser compute — 3 npm packages, live demo) and **unsaid** (a checker for characters TTS models silently refuse to say) end-to-end
-- 👁️ Now building **Drishti**, a fully offline vision assistant for blind users in Marathi, Hindi and English
+- 👁️ Shipped **Drishti**, a fully offline vision assistant for blind users in Marathi, Hindi and English — five modes, zero cloud calls, and a negative fine-tuning result published rather than buried
 - 🔍 Actively seeking **SDE / ML internship & placement opportunities for 2026**
 - 📫 Reach me at **dev.gurav011@gmail.com**
 
@@ -177,7 +177,7 @@
       </details>
     </td>
     <td width="50%" valign="top">
-      <h3>👁️ Drishti &nbsp;<img src="https://img.shields.io/badge/in--progress-dbab09?style=flat-square"/></h3>
+      <h3>👁️ Drishti &nbsp;<img src="https://img.shields.io/badge/completed-2ea44f?style=flat-square"/></h3>
       <p>A fully offline assistant for blind users that reads medicine strips, identifies rupee notes, reads Devanagari text, and describes surroundings aloud in Marathi, Hindi, and English — no internet, no cloud upload.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
@@ -192,7 +192,9 @@
           <li>All five modes run end-to-end on real models — read, medicine, currency, scene and visual Q&amp;A</li>
           <li>Currency classifier at 98.27% over 7 note classes, from a 6.2 MB checkpoint</li>
           <li>Medicine mode is guardrailed against India's NLEM 2022 list — the VLM never guesses a drug name</li>
-          <li>179 tests run with no GPU and no model weights; LoRA fine-tune in progress</li>
+          <li>Prompt engineering lifted VizWiz 0.308 → 0.533 with no training, so the LoRA was held to 0.533. It ran twice, came back statistically indistinguishable, and <strong>ships as a reported negative result</strong> — the prompt shipped, the adapter did not</li>
+          <li>The offline claim is measured, not asserted: the full task set run in aeroplane mode, spoken output verified by ear in both languages</li>
+          <li>255 tests run with no GPU and no model weights; limits stated rather than softened — it does not claim a blind user can operate it</li>
         </ul>
       </details>
     </td>
