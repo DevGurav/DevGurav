@@ -1,0 +1,35 @@
+<svg width="450" height="175" viewBox="0 0 450 175" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DevGurav's GitHub statistics">
+  <title>DevGurav's GitHub statistics</title>
+  <rect x="0" y="0" width="450" height="175" rx="6" fill="none"/>
+  <text x="25" y="35" fill="#22d3ee" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="18" font-weight="600">DevGurav's GitHub Stats</text>
+  <g transform="translate(25, 55)">
+    <g transform="translate(0, 0)">
+      <svg x="0" y="0" viewBox="0 0 16 16" width="16" height="16" fill="#8b5cf6">
+        <path d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
+      </svg>
+      <text x="27" y="12.5" fill="#9fb0c7" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="14">Total Commits:</text>
+      <text x="220" y="12.5" fill="#9fb0c7" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" text-anchor="end">894</text>
+    </g>
+    <g transform="translate(0, 25)">
+      <svg x="0" y="0" viewBox="0 0 16 16" width="16" height="16" fill="#8b5cf6">
+        <path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8z"/>
+      </svg>
+      <text x="27" y="12.5" fill="#9fb0c7" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="14">Public Repositories:</text>
+      <text x="220" y="12.5" fill="#9fb0c7" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" text-anchor="end">16</text>
+    </g>
+    <g transform="translate(0, 50)">
+      <svg x="0" y="0" viewBox="0 0 16 16" width="16" height="16" fill="#8b5cf6">
+        <path d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"/>
+      </svg>
+      <text x="27" y="12.5" fill="#9fb0c7" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="14">Languages Used:</text>
+      <text x="220" y="12.5" fill="#9fb0c7" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" text-anchor="end">8</text>
+    </g>
+    <g transform="translate(0, 75)">
+      <svg x="0" y="0" viewBox="0 0 16 16" width="16" height="16" fill="#8b5cf6">
+        <path d="M10.561 8.073a6.005 6.005 0 013.432 5.142.75.75 0 11-1.498.07 4.5 4.5 0 00-8.99 0 .75.75 0 01-1.498-.07 6.005 6.005 0 013.431-5.142 3.999 3.999 0 115.123 0zM10.5 5a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0z"/>
+      </svg>
+      <text x="27" y="12.5" fill="#9fb0c7" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="14">Followers:</text>
+      <text x="220" y="12.5" fill="#9fb0c7" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" text-anchor="end">8</text>
+    </g>
+  </g>
+</svg>
